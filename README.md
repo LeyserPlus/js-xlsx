@@ -3,6 +3,10 @@
 Parser and writer for various spreadsheet formats.  Pure-JS cleanroom implementation from official specifications and related documents.
 
 # About this fork
+
+Rio: Fork xlsx-style的原因是为了解决项目中存在jszip v3版本时候， 原有的xlsx-style的行为异常。 此版本只从自带的jszip文件中引用老版本的jszip对象。
+
+-----
 **NOTE:** [This project](https://github.com/SheetJS/js-xlsx/tree/beta) is a fork of the original (and awesome) [SheetJS/xlsx](https://github.com/SheetJS/js-xlsx) project.
 It is extended to enable cell formats to be read from and written to .xlsx workbooks.
 The intent is to provide a temporary means of using these features in practice, and ultimately to merge this into the primary project.
