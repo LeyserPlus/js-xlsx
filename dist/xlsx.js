@@ -1338,7 +1338,6 @@ function getzipdata(zip, file, safe) {
 }
 
 var _fs, jszip;
-if(typeof JSZip !== 'undefined') jszip = JSZip;
 if (typeof exports !== 'undefined') {
 	if (typeof module !== 'undefined' && module.exports) {
 		if(has_buf && typeof jszip === 'undefined') jszip = require('js'+'zip');
