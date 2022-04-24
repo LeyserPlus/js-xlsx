@@ -1341,7 +1341,14 @@ var _fs, jszip;
 if (typeof exports !== 'undefined') {
 	if (typeof module !== 'undefined' && module.exports) {
 		if(has_buf && typeof jszip === 'undefined') jszip = require('js'+'zip');
-		if(typeof jszip === 'undefined') jszip = require('./js'+'zip').JSZip;
+		if(typeof jszip === 'undefined') {
+			var rawJsZip = require('./js'+'zip');
+			if (rawJsZip && typeof rawJsZip.JSZip === "function") {
+				jszip = rawJsZip.JSZip;
+			} else if (typeof rawJsZip === "function") {
+				jszip = rawJsZip;
+			}
+		};
 		_fs = require('f'+'s');
 	}
 }
